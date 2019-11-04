@@ -52,6 +52,7 @@ plotExprHeatmap(daf, bin_anno = TRUE, row_anno = TRUE)
 
 # Can determine Which markers causing variance, using PCA-based non-redundancy scoring
 ## Markers with higher scores explain a large proportion of variability
+plotNRS(daf, type_markers(daf), color_by = "condition")
 
 # UMAP to determine the number of clusters to give to FlowSOM
 ## Can set rows_to_use to not include all cells
@@ -81,6 +82,9 @@ plotClusterHeatmap(dim_clusters, hm2 = "CD4", k = "meta20", draw_freqs = TRUE)
 # Plotting different UMAPs
 plotDR(dim_clusters, "UMAP", color_by = "meta20", facet = "sample_id")
 plotDR(dim_clusters, "UMAP", color_by = "meta20", facet = "condition")
+
+# Plot cluster expression
+plotClusterExprs(dim_clusters, k = "meta20", markers = "type")  
 
 ######################################################################
 ########## Paper then goes on to merge scripts #######################
