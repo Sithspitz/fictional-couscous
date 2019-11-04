@@ -67,6 +67,7 @@ dim_clusters <- cluster(dim_reduc_data, cols_to_use = type_markers(dim_reduc_dat
                xdim = 10, ydim = 10, maxK = 20, seed = 7, verbose = T) 
 
 # Overview Plots
+plotMDS(dim_clusters, color_by = "condition")
 plotDR(dim_clusters, "UMAP", color_by = "meta20")
 plotClusterHeatmap(dim_clusters,
                    hm2 = NULL, k = "meta20", m = NULL,
