@@ -47,6 +47,7 @@ expression_plot
 # Visualise Similarities between Patients 
 ## Using Multidimensional Scaling and Heatmapping
 MDS_plot <- plotMDS(daf, color_by = "condition")
+MDS_plot
 plotExprHeatmap(daf, bin_anno = TRUE, row_anno = TRUE)
 
 # Can determine Which markers causing variance, using PCA-based non-redundancy scoring
